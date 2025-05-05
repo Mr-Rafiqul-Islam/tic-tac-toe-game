@@ -33,11 +33,13 @@ cd tic-tac-toe-game
 ```bash
 npm install
 ```
+### 3. Start the Development Server
 ```bash
 npm run dev    # If using Vite
 # or
 npm start      # If using Create React App
 ```
+### 📁 Project Structure
 ```pgsql
 tic-tac-toe-game/
 ├── public/
@@ -50,3 +52,7 @@ tic-tac-toe-game/
 ├── package.json
 └── README.md
 ```
+
+📄 License
+This project is open source and available under the MIT License.
+
