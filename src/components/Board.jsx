@@ -1,21 +1,26 @@
 import React, { useState } from "react";
 import { Square } from "./Square";
+import { calculateWinner } from "../lib/helper";
 
 export const Board = () => {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [isNextX, setIsNextX] = useState(true);
   const handleClick = (i) => {
-      if(squares[i]){
-          return
-        }
+    if (squares[i] || calculateWinner(squares)) {
+      return;
+    }
     console.log("clicked");
     const nextSquares = squares.slice();
     nextSquares[i] = isNextX ? "X" : "O";
     setSquares([...nextSquares]);
     setIsNextX(!isNextX);
   };
+  const winner = calculateWinner(squares);
   return (
     <>
+      <h3 className="text-xl ml-1">
+        {winner ? `Winner: ${winner} 🥳🎉` : `Next Player: ${isNextX ? "X" : "O"}`}
+      </h3>
       <div className="flex">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
