@@ -32,8 +32,21 @@ cd tic-tac-toe-game
 
 ```bash
 npm install
-
+```
+```bash
 npm run dev    # If using Vite
 # or
 npm start      # If using Create React App
+```
+```pgsql
+tic-tac-toe-game/
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── tailwind.config.js
+├── package.json
+└── README.md
 ```
