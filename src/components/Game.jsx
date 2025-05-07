@@ -25,8 +25,8 @@ export default function Game() {
       description = "Go to game start";
     }
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li key={move} className="leading-5">
+        <button className="text-xl" onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
   });
